@@ -55,7 +55,7 @@ namespace TestNancy.Modules
 
 			var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
             //_logWriter.LogMessage("Handle Request");
-            return new DialogflowResponseV1
+            var response = new DialogflowResponseV1
 			{
                 Speech = "Hi Hello World Webhook Service",
                 DisplayText = "Hi Hello World Webhook Service",
@@ -68,6 +68,8 @@ namespace TestNancy.Modules
                 //	_messageGenerator.Generate(null) // random message serving no point apart from testing our Dependency Injection registrations in the Bootstrapper
                 //}
             };
+
+            return  new JsonResponse(response,new DefaultJsonSerializer());
 		}
 
 		private dynamic HandleV2Request()
