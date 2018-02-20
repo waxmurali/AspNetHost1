@@ -128,6 +128,7 @@
     <Compile Include="Modules\DialogflowModule.cs" />
     <Compile Include="Processing\ILogWriter.cs" />
     <Compile Include="Processing\IMessageGenerator.cs" />
+    <Compile Include="Processing\Implementation\Email.cs" />
     <Compile Include="Processing\Implementation\LogWriter.cs" />
     <Compile Include="Processing\Implementation\RandomMessageGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

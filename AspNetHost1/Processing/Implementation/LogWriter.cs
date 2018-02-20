@@ -10,8 +10,8 @@ namespace AspNetHost1.Processing.Implementation
     {
         public void LogMessage(string message)
         {
-            File.AppendAllText(@"D:\MP\WebhookLog.txt",
-                   $"{DateTime.Now} {message} {Environment.NewLine}");
+            //File.AppendAllText(@"D:\MP\WebhookLog.txt",
+            //       $"{DateTime.Now} {message} {Environment.NewLine}");
         }
     }
 }
