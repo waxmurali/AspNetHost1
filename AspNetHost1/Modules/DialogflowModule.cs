@@ -54,8 +54,8 @@ namespace TestNancy.Modules
 		{
             try
             {
-                //var dialogflowRequest = this.Bind<QueryRequestJsonModel>();
-                var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
+                var dialogflowRequest = this.Bind<QueryRequestJsonModel>();
+                //var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
                 _logWriter.LogMessage("Handle Request");
 
 		   
@@ -76,7 +76,6 @@ namespace TestNancy.Modules
 
                 var response = new QueryResponseJsonModel()
                 {
-                    Id = dialogflowRequest.Id,
                     SessionId = dialogflowRequest.SessionId,
                     Lang = dialogflowRequest.Lang,
                     Result = new QueryResponseResultJsonModel()
