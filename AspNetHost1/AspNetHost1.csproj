@@ -125,6 +125,7 @@
     <Compile Include="Models\DialogflowRequestV2.cs" />
     <Compile Include="Models\DialogflowResponseV1.cs" />
     <Compile Include="Models\DialogflowResponseV2.cs" />
+    <Compile Include="Models\QueryJsonModel.cs" />
     <Compile Include="Modules\DialogflowModule.cs" />
     <Compile Include="Processing\ILogWriter.cs" />
     <Compile Include="Processing\IMessageGenerator.cs" />

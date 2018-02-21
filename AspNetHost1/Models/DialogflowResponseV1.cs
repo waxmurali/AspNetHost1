@@ -34,6 +34,7 @@ namespace TestNancy.Models
     //}
 
 
+    [Serializable]
     public class DialogflowResponseV1
     {
         //[JsonProperty(PropertyName = "id")]
