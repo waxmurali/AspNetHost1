@@ -52,26 +52,35 @@ namespace TestNancy.Modules
 
 		private dynamic HandleV1Request()
 		{
+            try
+            {
 
-			var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
-            _logWriter.LogMessage("Handle Request");
-            var response = new DialogflowResponseV1
-			{
-                Speech = "Hi Hello World Webhook Service",
-                DisplayText = "Hi Hello World Webhook Service",
-                Source = "Webhook Service",
-                Data = new Data(),
-                ContextOut = new Context[0]
-                //Messages = new[]
-                //{
-                //	new Message("Test Message 1", 0),
-                //	new Message("Test Message 2", 0),
-                //	_messageGenerator.Generate(null) // random message serving no point apart from testing our Dependency Injection registrations in the Bootstrapper
-                //}
-            };
+                var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
+                _logWriter.LogMessage("Handle Request");
+
+		   
+                var response = new DialogflowResponseV1
+			    {
+                    Speech = "Hi Hello World Webhook Service",
+                    DisplayText = "Hi Hello World Webhook Service",
+                    Source = "Webhook Service",
+                    Data = new Data(),
+                    ContextOut = new Context[0]
+                    //Messages = new[]
+                    //{
+                    //	new Message("Test Message 1", 0),
+                    //	new Message("Test Message 2", 0),
+                    //	_messageGenerator.Generate(null) // random message serving no point apart from testing our Dependency Injection registrations in the Bootstrapper
+                    //}
+                };
 		    
-            return Response.AsJson(response);
-		}
+                return Response.AsJson(response,HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in processing request -- {ex.Message}",ex.InnerException);
+            }
+        }
 
 		private dynamic HandleV2Request()
 		{
