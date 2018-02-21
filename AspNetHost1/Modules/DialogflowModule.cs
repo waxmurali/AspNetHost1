@@ -61,6 +61,7 @@ namespace TestNancy.Modules
                 DisplayText = "Hi Hello World Webhook Service",
                 Source = "Webhook Service",
                 Data = new Data(),
+                ContextOut = new Context[0]
                 //Messages = new[]
                 //{
                 //	new Message("Test Message 1", 0),
@@ -68,8 +69,8 @@ namespace TestNancy.Modules
                 //	_messageGenerator.Generate(null) // random message serving no point apart from testing our Dependency Injection registrations in the Bootstrapper
                 //}
             };
-
-            return  new JsonResponse(response,new DefaultJsonSerializer());
+		    
+            return Response.AsJson(response);
 		}
 
 		private dynamic HandleV2Request()
