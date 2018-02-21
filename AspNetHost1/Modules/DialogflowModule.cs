@@ -54,8 +54,8 @@ namespace TestNancy.Modules
 		{
             try
             {
-                var dialogflowRequest = this.Bind<QueryRequestJsonModel>();
-                //var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
+                //var dialogflowRequest = this.Bind<QueryRequestJsonModel>();
+                var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
                 _logWriter.LogMessage("Handle Request");
 
 		   
@@ -76,6 +76,7 @@ namespace TestNancy.Modules
 
                 var response = new QueryResponseJsonModel()
                 {
+                    Id = dialogflowRequest.Id,
                     SessionId = dialogflowRequest.SessionId,
                     Lang = dialogflowRequest.Lang,
                     Result = new QueryResponseResultJsonModel()
@@ -85,7 +86,7 @@ namespace TestNancy.Modules
                             Speech = "Hi Hello World Webhook Service",
                             Messages = new List<FulfillmentMessageJsonModel>()
                             {
-                                new FulfillmentMessageJsonModel() {Speech = "Hi From Full",Text = "Hi From Text",Type = 0}
+                                new FulfillmentMessageJsonModel() {Speech = "Hi From Full",Text = "Hi From Text",Type = 0,Replies = new List<string>() {"testinggggggg123"},Title = "Google Home Test",Subtitle = "Chumma"}
                             }
                         },
                         Speech = "Hi Hello World Webhook Service",
