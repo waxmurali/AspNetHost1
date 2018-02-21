@@ -73,8 +73,9 @@ namespace TestNancy.Modules
                     //	_messageGenerator.Generate(null) // random message serving no point apart from testing our Dependency Injection registrations in the Bootstrapper
                     //}
                 };
-		    
-                return Response.AsJson(response,HttpStatusCode.OK);
+
+                return Response.AsJson(dialogflowRequest, HttpStatusCode.OK);
+                //return Response.AsJson(response,HttpStatusCode.OK);
             }
             catch (Exception ex)
             {
