@@ -58,11 +58,21 @@ namespace TestNancy.Modules
                 //var dialogflowRequest = this.Bind<Models.DialogflowRequestV1>();
                 _logWriter.LogMessage("Handle Request");
 
+                string welcomeText;
+                if (dialogflowRequest.Parameters.Welcomtext1.ToLower() == "web3")
+                {
+                    welcomeText = $"Hi welcome to {dialogflowRequest.Parameters.Welcomtext1} world";
+                }
+                else
+                {
+                    welcomeText = "Could not get you";
+                }
+
 
                 var response = new DialogflowResponseV1
                 {
-                    Speech = "Hi Hello World Webhook Service",
-                    DisplayText = "Hi Hello World Webhook Service",
+                    Speech = welcomeText,
+                    DisplayText = welcomeText,
                     Source = "Webhook Service",
                     Data = new Data(),
                     ContextOut = new Context[0]

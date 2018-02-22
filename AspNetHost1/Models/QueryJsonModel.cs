@@ -37,6 +37,9 @@ namespace AspNetHost1.Models
 
         [JsonProperty(PropertyName = "originalRequest")]
         public OriginalRequestJsonModel OriginalRequest { get; set; }
+
+        [JsonProperty(PropertyName = "parameters")]
+        public Parameters Parameters { get; set; }
     }
 
     public class ContextJsonModel
