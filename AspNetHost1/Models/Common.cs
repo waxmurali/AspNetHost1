@@ -90,8 +90,11 @@ namespace AspNetHost1.Models
 
     public class Parameters
     {
-        [JsonProperty(PropertyName = "welcomtext1")]
-        public string Welcomtext1 { get; set; }
+        [JsonProperty(PropertyName = "entityText")]
+        public string EntityText { get; set; }
+
+        [JsonProperty(PropertyName = "periodRange")]
+        public string PeriodRange { get; set; }
     }
 
     public class Status

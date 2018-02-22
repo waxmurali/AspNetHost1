@@ -131,7 +131,9 @@
     <Compile Include="Processing\IMessageGenerator.cs" />
     <Compile Include="Processing\Implementation\Email.cs" />
     <Compile Include="Processing\Implementation\LogWriter.cs" />
+    <Compile Include="Processing\Implementation\ProcessRequest.cs" />
     <Compile Include="Processing\Implementation\RandomMessageGenerator.cs" />
+    <Compile Include="Processing\IProcessRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -49,6 +49,8 @@ namespace TestNancy
 		    existingContainer.Register(Component
 		        .For<ILogWriter>()
 		        .ImplementedBy<EmailWriter>());
+
+		    existingContainer.Register(Component.For<IProcessRequest>().ImplementedBy<ProcessRequest>());
 		}
 
 		protected override void RequestStartup(IWindsorContainer container, IPipelines pipelines, NancyContext context)
