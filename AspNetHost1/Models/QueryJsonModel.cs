@@ -38,8 +38,8 @@ namespace AspNetHost1.Models
         [JsonProperty(PropertyName = "originalRequest")]
         public OriginalRequestJsonModel OriginalRequest { get; set; }
 
-        [JsonProperty(PropertyName = "parameters")]
-        public Parameters Parameters { get; set; }
+        [JsonProperty(PropertyName = "result")]
+        public QueryResponseResultJsonModel Result { get; set; }
     }
 
     public class ContextJsonModel
@@ -149,7 +149,8 @@ namespace AspNetHost1.Models
         public bool ActionIncomplete { get; set; }
 
         [JsonProperty(PropertyName = "parameters")]
-        public Dictionary<string, string> Parameters { get; set; }
+        //public Dictionary<string, string> Parameters { get; set; }
+        public Parameters Parameters { get; set; }
 
         [JsonProperty(PropertyName = "contexts")]
         public List<ContextJsonModel> Contexts { get; set; }

@@ -59,9 +59,9 @@ namespace TestNancy.Modules
                 _logWriter.LogMessage("Handle Request");
 
                 string welcomeText;
-                if (dialogflowRequest.Parameters.Welcomtext1.ToLower() == "web3")
+                if (dialogflowRequest.Result.Parameters.Welcomtext1.ToLower() == "web3")
                 {
-                    welcomeText = $"Hi welcome to {dialogflowRequest.Parameters.Welcomtext1} world";
+                    welcomeText = $"Hi welcome to {dialogflowRequest.Result.Parameters.Welcomtext1} world";
                 }
                 else
                 {
