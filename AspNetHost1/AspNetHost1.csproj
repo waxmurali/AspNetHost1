@@ -129,11 +129,16 @@
     <Compile Include="Modules\DialogflowModule.cs" />
     <Compile Include="Processing\ILogWriter.cs" />
     <Compile Include="Processing\IMessageGenerator.cs" />
+    <Compile Include="Processing\Implementation\ClientProcessRule.cs" />
+    <Compile Include="Processing\Implementation\DefaultProcessRule.cs" />
     <Compile Include="Processing\Implementation\Email.cs" />
     <Compile Include="Processing\Implementation\LogWriter.cs" />
     <Compile Include="Processing\Implementation\ProcessRequest.cs" />
     <Compile Include="Processing\Implementation\RandomMessageGenerator.cs" />
+    <Compile Include="Processing\Implementation\UserProcessRule.cs" />
+    <Compile Include="Processing\Implementation\WelcomeProcessRule.cs" />
     <Compile Include="Processing\IProcessRequest.cs" />
+    <Compile Include="Processing\IProcessRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
